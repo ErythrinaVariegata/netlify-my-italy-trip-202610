@@ -1,0 +1,83 @@
+:root{
+  --ink:#18201c;
+  --muted:#657069;
+  --cream:#fbf4e8;
+  --paper:#fffaf2;
+  --terracotta:#bd5b3d;
+  --wine:#713233;
+  --olive:#687653;
+  --gold:#d6a94c;
+  --line:rgba(24,32,28,.14);
+  --shadow:0 24px 80px rgba(45, 28, 18, .14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.hero{min-height:92vh;background:linear-gradient(110deg,rgba(24,32,28,.78),rgba(113,50,51,.55)),url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=2200&q=80') center/cover; color:white;position:relative}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:24px clamp(20px,5vw,70px);position:relative;z-index:2}
+.brand{font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:22px;font-weight:600;font-size:14px;color:rgba(255,255,255,.86)}
+.nav-links a:hover{color:white}
+.nav-toggle{display:none;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:white;border-radius:12px;padding:8px 12px;font-size:20px}
+.hero-content{max-width:980px;padding:100px clamp(20px,7vw,96px) 80px}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-weight:800;font-size:12px;color:var(--gold);margin:0 0 14px}
+.hero .eyebrow{color:#ffd98c}
+h1,h2,h3{font-family:"Noto Serif SC",serif;line-height:1.15;margin:0}
+h1{font-size:clamp(42px,7vw,88px);letter-spacing:-.04em}
+.hero-subtitle{max-width:760px;font-size:clamp(17px,2vw,22px);color:rgba(255,255,255,.88);margin:28px 0 34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.btn{padding:13px 22px;border-radius:999px;font-weight:800}.primary{background:#fff;color:var(--wine)}.secondary{border:1px solid rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.08)}
+.section{padding:86px clamp(20px,6vw,90px)}.section.alt{background:var(--paper)}.section-heading{max-width:820px;margin-bottom:38px}.section-heading h2{font-size:clamp(32px,5vw,56px);letter-spacing:-.03em}.section-heading p:not(.eyebrow){font-size:18px;color:var(--muted)}
+.route-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.route-card{min-height:260px;border-radius:28px;padding:24px;color:white;background:var(--wine);box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.route-card:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.08));z-index:0}.route-card>*{position:relative;z-index:1}.route-card span{position:absolute;top:20px;right:22px;font-weight:900;color:rgba(255,255,255,.55)}.route-card h3{font-size:27px}.route-card p{font-weight:800;margin:8px 0 6px}.route-card small{color:rgba(255,255,255,.82)}.rome{background:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&q=80') center/cover}.florence{background:url('https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?auto=format&fit=crop&w=900&q=80') center/cover}.venice{background:url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=900&q=80') center/cover}.milan{background:url('https://images.unsplash.com/photo-1610016302534-6f67f1c968d8?auto=format&fit=crop&w=900&q=80') center/cover}
+.notice{margin-top:24px;border:1px solid var(--line);background:rgba(214,169,76,.16);padding:18px 20px;border-radius:20px;color:#4c3d20}.timeline{max-width:980px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:120px;top:0;bottom:0;width:2px;background:var(--line)}.day{display:grid;grid-template-columns:160px minmax(0,1fr);gap:34px;padding:22px 0;position:relative}.day:after{content:"";position:absolute;left:112px;top:35px;width:18px;height:18px;background:var(--terracotta);border:5px solid var(--paper);border-radius:50%;box-shadow:0 0 0 1px var(--line)}.day time{font-weight:900;color:var(--terracotta)}.day-content{min-width:0}.day h3{font-size:24px;margin-bottom:6px}.day p{margin:0;color:var(--muted)}
+.cards{display:grid;gap:20px}.cards.three{grid-template-columns:repeat(3,1fr)}.info-card,.hotel,.reservation-plan{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 16px 48px rgba(45,28,18,.08)}.info-card h3,.hotel h3,.reservation-plan h3{font-size:24px;margin-bottom:12px}.info-card p,.hotel p{color:var(--muted)}
+.hotel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.hotel span{display:inline-block;margin-top:12px;padding:6px 12px;background:rgba(104,118,83,.12);color:var(--olive);border-radius:999px;font-weight:800;font-size:13px}
+.food-list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.food-list div{background:var(--wine);color:white;padding:24px;border-radius:26px}.food-list h3{font-size:25px}.food-list p{color:rgba(255,255,255,.82)}.reservation-plan{margin-top:20px;background:var(--paper)}.reservation-plan li{margin:8px 0;color:var(--muted)}
+.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:980px}.checklist label{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 16px;font-weight:650}.checklist input{width:18px;height:18px;margin-top:3px;accent-color:var(--terracotta)}
+.footer{padding:30px clamp(20px,6vw,90px);display:flex;justify-content:space-between;gap:20px;background:var(--ink);color:white}.footer p{margin:0;color:rgba(255,255,255,.75)}.footer a{font-weight:800;color:#ffd98c}
+@media(max-width:980px){.route-grid,.hotel-grid,.food-list,.cards.three{grid-template-columns:repeat(2,1fr)}.timeline:before{left:8px}.day{grid-template-columns:1fr;padding-left:38px}.day:after{left:0}.day time{margin-bottom:-20px}.checklist{grid-template-columns:1fr}}
+@media(max-width:720px){.hero{min-height:auto}.nav{position:relative}.nav-toggle{display:block}.nav-links{display:none;position:absolute;right:20px;top:70px;flex-direction:column;background:rgba(24,32,28,.96);padding:18px;border-radius:18px;width:210px}.nav-links.open{display:flex}.hero-content{padding-top:64px}.route-grid,.hotel-grid,.food-list,.cards.three{grid-template-columns:1fr}.section{padding:64px 20px}.footer{flex-direction:column}.hero-actions .btn{width:100%;text-align:center}}
+.budget-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.budget-summary article{background:#fff;border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 16px 48px rgba(45,28,18,.06)}
+.budget-summary span{display:block;color:var(--terracotta);font-weight:900;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.budget-summary strong{display:block;font-size:20px;line-height:1.25;margin-bottom:8px}.budget-summary p{color:var(--muted);margin:0}
+.budget-table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 16px 48px rgba(45,28,18,.08);margin:22px 0}.budget-table{width:100%;border-collapse:collapse;min-width:900px}.budget-table th,.budget-table td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.budget-table th{background:rgba(113,50,51,.08);color:var(--wine);font-weight:900}.budget-table td{color:var(--muted)}.budget-table td:first-child{color:var(--ink);font-weight:800}.restaurant-costs{margin-top:24px}.restaurant-costs h3{font-size:28px;margin-bottom:16px}.cost-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.cost-grid div{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px}.cost-grid strong{font-family:"Noto Serif SC",serif;font-size:20px}.cost-grid p{color:var(--muted);margin:8px 0 0}
+@media(max-width:980px){.budget-summary,.cost-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){.budget-summary,.cost-grid{grid-template-columns:1fr}.budget-table{min-width:760px}}
+
+/* 2026 final three-city plan */
+.three-route{grid-template-columns:repeat(3,1fr)}
+.featured-hotels{grid-template-columns:repeat(3,1fr)}
+.booking-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:24px}
+.booking-summary article{background:#fff;border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:0 16px 48px rgba(45,28,18,.07)}
+.booking-summary strong{display:block;font-family:"Noto Serif SC",serif;font-size:21px;line-height:1.3;margin:12px 0 8px}
+.booking-summary p{margin:0;color:var(--muted)}
+.status,.pill{display:inline-flex;align-items:center;border-radius:999px;font-weight:900;white-space:nowrap}
+.status{padding:7px 12px;font-size:12px;letter-spacing:.05em}.pill{padding:5px 9px;font-size:12px}
+.status.open,.pill.open{background:rgba(104,118,83,.14);color:#52613f}
+.status.soon,.pill.soon{background:rgba(214,169,76,.2);color:#7a5b17}
+.status.later,.pill.later{background:rgba(189,91,61,.14);color:#963f29}
+.status.done,.pill.done{background:rgba(28,130,55,.14);color:#22773b}
+.booking-table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 16px 48px rgba(45,28,18,.08)}
+.booking-table{width:100%;min-width:1120px;border-collapse:collapse}
+.booking-table th,.booking-table td{padding:15px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.booking-table th{background:rgba(113,50,51,.08);color:var(--wine);font-weight:900}
+.booking-table td{color:var(--muted)}
+.booking-table td:first-child{color:var(--ink);font-weight:900}
+.mini-btn{display:inline-flex;align-items:center;justify-content:center;margin:2px 4px 2px 0;padding:8px 12px;border-radius:999px;background:var(--wine);color:#fff!important;font-weight:850;font-size:12px;white-space:nowrap}
+.mini-btn.ghost{background:rgba(113,50,51,.1);color:var(--wine)!important}
+.source-note{margin-top:18px;padding:16px 18px;border-left:4px solid var(--gold);background:rgba(214,169,76,.12);border-radius:0 16px 16px 0;color:#5b4c2b;font-size:14px}
+.link-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.action-link{display:inline-flex;padding:11px 17px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--wine);font-weight:850;box-shadow:0 8px 24px rgba(45,28,18,.06)}
+.action-link:hover,.hotel-actions a:hover,.restaurant-card a:hover{transform:translateY(-1px)}
+.hotel-kicker{margin:0 0 9px!important;color:var(--terracotta)!important;font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.07em}
+.rating-line{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line);font-weight:800;color:var(--olive);font-size:14px}
+.hotel-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.hotel-actions a{display:inline-flex;padding:9px 13px;background:var(--wine);color:#fff;border-radius:999px;font-weight:850;font-size:13px;transition:.18s ease}
+.hotel-actions a+ a{background:rgba(113,50,51,.1);color:var(--wine)}
+.restaurant-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.restaurant-card{display:flex;flex-direction:column;justify-content:space-between;min-height:300px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:23px;box-shadow:0 16px 48px rgba(45,28,18,.07)}
+.restaurant-card span{display:inline-block;color:var(--terracotta);font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;margin-bottom:9px}
+.restaurant-card h3{font-size:23px;margin-bottom:10px}.restaurant-card p{color:var(--muted);margin:0}.restaurant-card strong{display:block;margin:18px 0 12px;color:var(--olive)}
+.restaurant-card a{display:inline-flex;align-self:flex-start;padding:9px 14px;border-radius:999px;background:var(--wine);color:#fff;font-weight:850;font-size:13px;transition:.18s ease}
+@media(max-width:980px){.three-route,.featured-hotels,.booking-summary,.restaurant-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.three-route,.featured-hotels,.booking-summary,.restaurant-grid{grid-template-columns:1fr}.booking-table{min-width:980px}}
