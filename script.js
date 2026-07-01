@@ -62,3 +62,17 @@ boxes.forEach((box, i) => {
   style.textContent = `.hotel-grid-v2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.hotel-grid-v2.three{grid-template-columns:repeat(3,minmax(0,1fr))}.hotel-card-v2{background:#fff;border:1px solid rgba(190,166,132,.3);border-radius:24px;padding:22px;box-shadow:0 12px 28px rgba(55,45,32,.05)}.hotel-card-v2.featured{border-color:rgba(142,87,74,.35);background:linear-gradient(180deg,#fff,rgba(142,87,74,.04))}.hotel-card-v2.booked{border-color:rgba(46,123,73,.3)}.tag-row{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;color:#786c5e;font-size:13px}.tag{padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px}.booked-tag{background:rgba(46,123,73,.14);color:#2e7b49}.view-tag{background:rgba(83,113,130,.14);color:#3f6477}.calm-tag{background:rgba(96,120,92,.14);color:#587755}.spa-tag{background:rgba(104,90,146,.14);color:#66589a}.choice-tag{background:rgba(142,73,102,.14);color:#894763}.service-tag{background:rgba(150,105,56,.14);color:#8f642f}.hotel-card-v2 h3{margin:12px 0 8px;font-size:24px;line-height:1.25}.hotel-card-v2 p{margin:0;color:#625a50;line-height:1.75}.mini-note{margin-top:12px;padding:12px 14px;border-radius:16px;background:rgba(126,97,62,.07);color:#665c50;line-height:1.6}.hotel-section-v2{margin-top:24px}.city-title p{margin:0 0 4px;color:#9b7655;font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.city-title h3{margin:0;font-size:28px}@media(max-width:1050px){.hotel-grid-v2,.hotel-grid-v2.three{grid-template-columns:1fr 1fr}}@media(max-width:720px){.hotel-grid-v2,.hotel-grid-v2.three{grid-template-columns:1fr}.hotel-card-v2{padding:18px}.hotel-card-v2 h3{font-size:21px}}`;
   document.head.appendChild(style);
 })();
+
+(function addFlorenceDinnerBookingCards() {
+  const grid = document.querySelector('#food .restaurant-grid');
+  if (!grid || document.querySelector('.reservation-card-broof')) return;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'restaurant-reservation-highlight';
+  wrapper.innerHTML = `
+    <article class="restaurant-card reservation-card-broof"><div><span>10/1 · 佛罗伦萨景观晚餐</span><h3>B-Roof Restaurant</h3><p>官网可在线订位；晚餐时段通常从 19:30 起。也可电话 +39 055 23588560 或邮件 info@b-roof.it。若只想先喝一杯看景，需另看 American Bar 订位。</p></div><strong>建议 20:00–20:30</strong><a href="https://b-roof.myrestoo.net/en/reservar" rel="noopener" target="_blank">在线订位</a></article>
+    <article class="restaurant-card"><div><span>10/1 · 佛罗伦萨河景正式晚餐</span><h3>Borgo San Jacopo</h3><p>官网通过 SevenRooms 订位；开放时间为周三至周日 19:00–22:00。也可电话 +39 055 281661、WhatsApp +39 342 1234710、邮件 bsj@lungarnocollection.com。</p></div><strong>建议 20:00</strong><a href="https://www.sevenrooms.com/explore/borgosanjacopo/reservations/create/search/landing?lang=it&venues=borgosanjacopo%2Ccaffdelloro" rel="noopener" target="_blank">Book a table</a></article>`;
+  grid.prepend(wrapper);
+  const style = document.createElement('style');
+  style.textContent = `.restaurant-reservation-highlight{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:4px}.restaurant-reservation-highlight .restaurant-card{border:1px solid rgba(127,62,56,.22);background:linear-gradient(180deg,#fff,rgba(127,62,56,.035))}@media(max-width:760px){.restaurant-reservation-highlight{grid-template-columns:1fr}}`;
+  document.head.appendChild(style);
+})();
