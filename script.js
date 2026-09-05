@@ -84,3 +84,12 @@ boxes.forEach((box, i) => {
   style.textContent = `.restaurant-reservation-highlight{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:4px}.restaurant-reservation-highlight .restaurant-card{border:1px solid rgba(127,62,56,.22);background:linear-gradient(180deg,#fff,rgba(127,62,56,.035))}@media(max-width:760px){.restaurant-reservation-highlight{grid-template-columns:1fr}}`;
   document.head.appendChild(style);
 })();
+
+;(() => {
+  if (document.querySelector('script[data-italia-enhancements]')) return;
+  const s = document.createElement('script');
+  s.src = 'enhancements.js?v=20260906';
+  s.async = false;
+  s.dataset.italiaEnhancements = '1';
+  document.head.appendChild(s);
+})();
